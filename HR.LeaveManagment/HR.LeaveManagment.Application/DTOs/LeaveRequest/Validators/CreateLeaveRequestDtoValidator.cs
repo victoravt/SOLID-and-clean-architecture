@@ -10,6 +10,7 @@ namespace HR.LeaveManagment.Application.DTOs.LeaveRequest.Validators
     {
         public ILeaveRequestRepository _repo;
 
+       
 
         public CreateLeaveRequestDtoValidator(ILeaveRequestRepository repo)
         {
