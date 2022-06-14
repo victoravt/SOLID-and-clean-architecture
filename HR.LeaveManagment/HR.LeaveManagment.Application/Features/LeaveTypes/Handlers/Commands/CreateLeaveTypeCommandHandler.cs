@@ -3,7 +3,7 @@ using HR.LeaveManagement.Domain;
 using HR.LeaveManagment.Application.DTOs.LeaveType.Validators;
 using HR.LeaveManagment.Application.Exceptions;
 using HR.LeaveManagment.Application.Features.LeaveTypes.Requests.Commands;
-using HR.LeaveManagment.Application.Persistence.Contracts;
+using HR.LeaveManagment.Application.Contracts.Persistence;
 using HR.LeaveManagment.Application.Responses;
 using MediatR;
 using System;

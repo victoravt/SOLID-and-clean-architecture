@@ -2,13 +2,14 @@
 using HR.LeaveManagment.Application.DTOs;
 using HR.LeaveManagment.Application.Features.LeaveTypes.Requests;
 using HR.LeaveManagment.Application.Features.LeaveTypes.Requests.Queries;
-using HR.LeaveManagment.Application.Persistence.Contracts;
+using HR.LeaveManagment.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using HR.LeaveManagment.Application.DTOs.LeaveType;
 
 namespace HR.LeaveManagment.Application.Features.LeaveTypes.Handlers.Queries
 {
