@@ -36,6 +36,7 @@ namespace HR.LeaveManagment.Application.Features.LeaveTypes.Handlers.Commands
                 response.Success = false;
                 response.Message = "Creation faild";
                 response.Errors = validationResult.Errors.Select(q => q.ErrorMessage).ToList();
+                return response;
             }            
 
             var leaveType = _mapper.Map<LeaveType>(request.LeaveTypeDto);

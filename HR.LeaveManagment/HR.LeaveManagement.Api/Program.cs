@@ -9,7 +9,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(x =>
+    x.SwaggerDoc("v1", 
+        new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Hr LeaveManagement Api", 
+        Version = "v1" })
+    );
 
 builder.Services.ConfigureApplicationServices();
 builder.Services.ConfigureInfrstructureServices(builder.Configuration);
@@ -28,9 +32,10 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
+    
 }
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 

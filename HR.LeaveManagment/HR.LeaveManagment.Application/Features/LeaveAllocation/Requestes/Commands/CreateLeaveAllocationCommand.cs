@@ -7,7 +7,7 @@ using System.Text;
 
 namespace HR.LeaveManagment.Application.Features.LeaveAllocation.Requestes.Commands
 {
-    internal class CreateLeaveAllocationCommand : IRequest<BaseCommandResponse>
+    public class CreateLeaveAllocationCommand : IRequest<BaseCommandResponse>
     {
         public CreateLeaveAllocationDto LeaveAllocationDto { get; set; }
     }
